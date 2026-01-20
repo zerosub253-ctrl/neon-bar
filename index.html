@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA | Aurora Lounge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+    <div class="aurora-bg"></div>
+
+    <header>
+        <div class="logo">LUMINA</div>
+        <nav>
+            <a href="#menu">Меню</a>
+            <a href="#vibe">Атмосфера</a>
+        </nav>
+        <button class="btn-glass open-reserve">Забронировать</button>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content glass-panel">
+            <p class="subtitle">EST. 2026 • ODESSA</p>
+            <h1>ИСКУССТВО<br><span class="gradient-text">В БОКАЛЕ</span></h1>
+            <p class="desc">Погружение в чувственный опыт. <br>Коктейли, которые меняют реальность.</p>
+            <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Смотреть карту</button>
+        </div>
+    </section>
+
+    <section class="menu-section" id="menu">
+        <div class="section-header">
+            <h2>КОЛЛЕКЦИЯ</h2>
+            <p>Нажмите на коктейль для деталей</p>
+        </div>
+        
+        <div class="grid">
+            <div class="card cocktail-card" 
+                 data-title="Sapphire Soul" 
+                 data-price="450₴" 
+                 data-img="1.jpg"
+                 data-desc="Глубокий, как океан. Основа из премиального джина Bombay Sapphire, настоянного на цветах клитории.">
+                <div class="img-container">
+                    <img src="1.jpg" alt="Sapphire Soul">
+                </div>
+                <div class="card-info">
+                    <div class="info-top">
+                        <h3>Sapphire Soul</h3>
+                        <span class="price">450₴</span>
+                    </div>
+                    <p>Джин Bombay, голубая матча, тоник.</p>
+                    <span class="tap-hint">Подробнее →</span>
+                </div>
+            </div>
+
+            <div class="card cocktail-card"
+                 data-title="Rose Quartz" 
+                 data-price="520₴" 
+                 data-img="2.jpg"
+                 data-desc="Воплощение нежности. Французская водка, настоянная на лепестках чайной розы.">
+                <div class="img-container">
+                    <img src="2.jpg" alt="Rose Quartz">
+                </div>
+                <div class="card-info">
+                    <div class="info-top">
+                        <h3>Rose Quartz</h3>
+                        <span class="price">520₴</span>
+                    </div>
+                    <p>Розовая водка, личи, роза.</p>
+                    <span class="tap-hint">Подробнее →</span>
+                </div>
+            </div>
+
+            <div class="card cocktail-card"
+                 data-title="Amber Gold" 
+                 data-price="480₴" 
+                 data-img="3.jpg"
+                 data-desc="Брутальная классика. Ром, копченый на щепе вишни, тростниковый сахар.">
+                <div class="img-container">
+                    <img src="3.jpg" alt="Amber Gold">
+                </div>
+                <div class="card-info">
+                    <div class="info-top">
+                        <h3>Amber Gold</h3>
+                        <span class="price">480₴</span>
+                    </div>
+                    <p>Ром, жженый сахар, апельсин.</p>
+                    <span class="tap-hint">Подробнее →</span>
+                </div>
+            </div>
+
+             <div class="card cocktail-card"
+                 data-title="Velvet Night" 
+                 data-price="460₴" 
+                 data-img="4.jpg"
+                 data-desc="Мистический вкус. Бурбон, свежая ежевика и веточка розмарина.">
+                <div class="img-container">
+                    <img src="4.jpg" alt="Velvet Night">
+                </div>
+                <div class="card-info">
+                    <div class="info-top">
+                        <h3>Velvet Night</h3>
+                        <span class="price">460₴</span>
+                    </div>
+                    <p>Бурбон, ежевика, розмарин.</p>
+                    <span class="tap-hint">Подробнее →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner-content">
+            <h2>MAKING MEMORIES</h2>
+        </div>
+    </section>
+
+    <section class="vibe-section" id="vibe">
+        <div class="vibe-img-box">
+            <img src="girl.jpg" alt="Vibe">
+        </div>
+        <div class="vibe-text-box">
+            <div class="glass-panel-small">
+                <h2>АТМОСФЕРА</h2>
+                <p>Мягкий свет, глубокий звук и приватность.</p>
+                <button class="btn-primary open-reserve">Guest List</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 LUMINA LOUNGE</p>
+    </footer>
+
+    <div id="cocktail-modal" class="modal">
+        <div class="modal-content glass-panel">
+            <span class="close-btn">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img-box">
+                    <img id="modal-img" src="" alt="">
+                </div>
+                <div class="modal-text">
+                    <h3 id="modal-title">Название</h3>
+                    <p id="modal-desc">Описание</p>
+                    <div class="modal-footer">
+                        <span id="modal-price" class="modal-price">000₴</span>
+                        <button class="btn-primary open-reserve">Забронировать</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="reserve-modal" class="modal">
+        <div class="modal-content glass-panel small-modal">
+            <span class="close-btn">&times;</span>
+            <h2>RESERVATION</h2>
+            <p>Количество мест ограничено.</p>
+            <div class="phone-box">
+                <span>Бронь столов:</span>
+                <a href="tel:+380990000000" class="phone-link">+380 99 000 00 00</a>
+            </div>
+            <p class="sub-text">Работаем: Чт-Вс с 20:00</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
