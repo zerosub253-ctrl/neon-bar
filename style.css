@@ -46,7 +46,7 @@ nav a:hover { opacity: 1; color: var(--aurora-2); }
 }
 .btn-glass:hover { background: rgba(255,255,255,0.2); }
 
-/* HERO - Исправлен путь */
+/* HERO - ПУТЬ К ФОНУ БЕЗ ПАПКИ */
 .hero {
     height: 100vh; display: flex; align-items: center; justify-content: center;
     background: url('bg.jpg') no-repeat center center;
@@ -63,8 +63,8 @@ nav a:hover { opacity: 1; color: var(--aurora-2); }
 
 .gradient-text {
     background: linear-gradient(90deg, var(--aurora-3), var(--aurora-2));
-    /* Исправлена ошибка в терминале: добавлен стандартный background-clip */
     -webkit-background-clip: text;
+    /* ИСПРАВЛЕНА ОШИБКА CSS */
     background-clip: text;
     -webkit-text-fill-color: transparent; color: transparent;
 }
@@ -108,7 +108,7 @@ nav a:hover { opacity: 1; color: var(--aurora-2); }
 .card-info p { color: var(--text-gray); margin-bottom: 20px; font-size: 0.9rem; }
 .tap-hint { font-size: 0.8rem; color: var(--aurora-2); text-transform: uppercase; letter-spacing: 1px; }
 
-/* BANNER - Исправлен путь */
+/* BANNER - ПУТЬ К ФОНУ БЕЗ ПАПКИ */
 .banner {
     height: 50vh; background: url('crystal.jpg') fixed center center;
     background-size: cover; display: flex; align-items: center; justify-content: center;
